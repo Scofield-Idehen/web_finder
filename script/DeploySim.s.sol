@@ -1,10 +1,10 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-import {script} from "forge-std/script.sol";
+import {Script} from "forge-std/Script.sol";
 import {SimpleStorage} from "../src/SimpleStorage.sol";
 
-contract Deploy_Contract is script{
+contract Deploy_Contract is Script{
     function run() external returns (SimpleStorage){
         vm.startBroadcast();
         SimpleStorage simpleStorage = new SimpleStorage();
